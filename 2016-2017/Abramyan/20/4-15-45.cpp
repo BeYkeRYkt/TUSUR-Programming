@@ -272,6 +272,8 @@ void task45(){
 	node->prev->next = node->next;
 	if (node->next){
 		node->next->prev = node->prev;
+	} else {
+		node->next = node -> prev;
 	}
 
 	node->prev = NULL;
