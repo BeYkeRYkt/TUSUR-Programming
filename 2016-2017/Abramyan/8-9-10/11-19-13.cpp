@@ -33,7 +33,7 @@ void task8_11(){
 	cout << "Введите N" << endl << "-> ";
 	cin >> N;
 
-	if (N < 0){
+	if (N <= 0){
 		cout << "Reverting! Число не может меньше нуля!";
 		return;
 	}
@@ -43,7 +43,6 @@ void task8_11(){
 	for (int i = 0; i <= N; i++){
 		summ += pow(N + i, 2);
 	}
-	summ += pow(N * 2, 2);
 
 	cout << "Результат: " << summ;
 }
@@ -53,20 +52,13 @@ void task9_19(){
 	cout << "Введите N" << endl << "-> ";
 	cin >> N;
 
+	cout << "Result: ";
 
-	int del = 0;
-	cout << "Делим на " << endl << "-> ";
-	cin >> del;
-
-	if (del == 0){
-		cout << "Reverting! На ноль делить нельзя!" << endl;
-		return;
+	int full = N;
+	while (full != 0){
+		cout << full % 10;
+		full = full / 10;
 	}
-
-	int div = N / del;
-	int mod = N % del;
-
-	cout << "Result: " << mod << " " << div;
 }
 
 void task10_13(){
