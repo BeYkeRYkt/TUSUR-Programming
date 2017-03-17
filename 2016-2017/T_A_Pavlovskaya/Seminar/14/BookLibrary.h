@@ -33,5 +33,9 @@ public:
 	void viewAllBooks();
 
 	int getIndex(Book* book);
+
+	void sortByName();
+
+	void sortByDate();
 };
 #endif

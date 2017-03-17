@@ -7,7 +7,7 @@ BookLibrary lib = BookLibrary();
 bool DEBUG = false;
 
 void logDebug(string text){
-	cout << endl << "[DEBUG] " << text << endl;
+	cout << "[DEBUG] " << text << endl;
 }
 
 void addBook(string author, string name, int year){
@@ -36,7 +36,7 @@ void testing(){
 	DEBUG = true;
 
 	//Add book
-	cout << "Adding book's...";
+	cout << "Adding book's..." << endl;
 	addBook("DevelopedOne", "The Fallen Fox", 2017);
 	addBook("DevelopedOne", "Hardbook", 2017);
 	addBook("123", "13", 1014);
@@ -45,6 +45,7 @@ void testing(){
 
 	cout << endl;
 
+	cout << "Getting book's from name and date..." << endl;
 	//Get book from name
 	Book* book = lib.search("The Fallen Fox");
 	cout << "<!--- Book info ---!>" << endl;
@@ -63,11 +64,27 @@ void testing(){
 
 	cout << endl;
 
+	//sort by name
+	cout << "Sorting..." << endl;
+	lib.sortByName();
+	lib.viewAllBooks();
+
+	//sort by date
+	lib.sortByDate();
+	lib.viewAllBooks();
+
+	cout << "Remove books" << endl;
 	//Search remove book
 	removeBook(book);
 	removeBook(booky);
 
 	lib.viewAllBooks();
+
+	cout << "Clear test books" << endl;
+	Book* prequel = lib.search("Prequel or making a cat cry");
+	Book* hardbook = lib.search("Hardbook");
+	lib.removeBook(prequel);
+	lib.removeBook(hardbook);
 
 	DEBUG = false;
 
@@ -87,10 +104,13 @@ void main(){
 		cout << "3. Поиск книги по названию" << endl;
 		cout << "4. Поиск книги по дате" << endl;
 		cout << "5. Показать все книги" << endl;
-		cout << "6. Быстрый тест" << endl;
+		cout << "6. Сортировка по названию" << endl;
+		cout << "7. Сортировка по дате" << endl;
+		cout << "8. Быстрый тест" << endl;
 		cout << endl << "0. - Выход" << endl;
 		cout << "-> ";
 		cin >> i;
+		cout << endl;
 
 		switch (i){
 		case 0:
@@ -108,11 +128,11 @@ void main(){
 				   cin >> year;
 
 				   addBook(author, name, year);
-				   cout << endl;
+				   //cout << endl;
 		}
 			break;
 		case 2:{
-				   string name = NULL;
+				   string name;
 				   cout << endl << "Введите название" << endl << "-> ";
 				   cin.get(); //fix
 				   getline(cin, name);
@@ -124,11 +144,11 @@ void main(){
 				   else{
 					   cout << "Такой книги не существует." << endl;
 				   }
-				   cout << endl;
+				   //cout << endl;
 		}
 			break;
 		case 3:{
-				   string name = NULL;
+				   string name;
 				   cout << endl << "Введите название" << endl << "-> ";
 				   cin.get(); //fix
 				   getline(cin, name);
@@ -142,9 +162,9 @@ void main(){
 					   cout << "Год: " << book->year << endl;
 				   }
 				   else{
-					   cout << "Такой книги не существует.";
+					   cout << "Такой книги не существует." << endl;
 				   }
-				   cout << endl;
+				   //cout << endl;
 		}
 			break;
 		case 4:{
@@ -161,9 +181,9 @@ void main(){
 					   cout << "Год: " << book->year << endl;
 				   }
 				   else{
-					   cout << "Такой книги не существует.";
+					   cout << "Такой книги не существует." << endl;
 				   }
-				   cout << endl;
+				   //cout << endl;
 		}
 			break;
 		case 5:
@@ -171,11 +191,20 @@ void main(){
 			cout << endl;
 			break;
 		case 6:
+			lib.sortByName();
+			cout << "Отсортировано по названию." << endl;
+			break;
+		case 7:
+			lib.sortByDate();
+			cout << "Отсортировано по дате." << endl;
+			break;
+		case 8:
 			testing();
 			break;
 		default:
-			cout << "Неизвестный номер.";
+			cout << "Неизвестный номер." << endl;
 			break;
 		}
+		cout << endl;
 	}
 }

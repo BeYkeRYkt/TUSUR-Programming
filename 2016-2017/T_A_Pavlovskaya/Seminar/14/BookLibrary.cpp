@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 #include "BookLibrary.h"
 
@@ -48,4 +49,18 @@ int BookLibrary::getIndex(Book* book){
 		index++;
 	}
 	return index;
+}
+
+void BookLibrary::sortByName(){
+	sort(begin(lib), end(lib), [](const Book* b1, const Book* b2)
+	{
+		return b1->name < b2->name;
+	});
+}
+
+void BookLibrary::sortByDate(){
+	sort(begin(lib), end(lib), [](const Book* b1, const Book* b2)
+	{
+		return b1->year < b2->year;
+	});
 }
