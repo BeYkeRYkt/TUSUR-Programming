@@ -12,7 +12,7 @@ void logDebug(string text){
 
 void addBook(string author, string name, int year){
 	if (lib.search(name) != NULL){
-		cout << "Êíèãà óæå ñóùåñòâóåò." << endl;
+		cout << "ÐšÐ½Ð¸Ð³Ð° ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚." << endl;
 		return;
 	}
 
@@ -81,14 +81,14 @@ void main(){
 
 	while (run){
 		int i = 0;
-		cout << "Êíèæíàÿ áèáëèîòåêà" << endl;
-		cout << "1. Äîáàâèòü êíèãó" << endl;
-		cout << "2. Óäàëèòü êíèãó" << endl;
-		cout << "3. Ïîèñê êíèãè ïî íàçâàíèþ" << endl;
-		cout << "4. Ïîèñê êíèãè ïî äàòå" << endl;
-		cout << "5. Ïîêàçàòü âñå êíèãè" << endl;
-		cout << "6. Áûñòðûé òåñò" << endl;
-		cout << endl << "0. - Âûõîä" << endl;
+		cout << "ÐšÐ½Ð¸Ð¶Ð½Ð°Ñ Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐ°" << endl;
+		cout << "1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÐºÐ½Ð¸Ð³Ñƒ" << endl;
+		cout << "2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÐºÐ½Ð¸Ð³Ñƒ" << endl;
+		cout << "3. ÐŸÐ¾Ð¸ÑÐº ÐºÐ½Ð¸Ð³Ð¸ Ð¿Ð¾ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸ÑŽ" << endl;
+		cout << "4. ÐŸÐ¾Ð¸ÑÐº ÐºÐ½Ð¸Ð³Ð¸ Ð¿Ð¾ Ð´Ð°Ñ‚Ðµ" << endl;
+		cout << "5. ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð²ÑÐµ ÐºÐ½Ð¸Ð³Ð¸" << endl;
+		cout << "6. Ð‘Ñ‹ÑÑ‚Ñ€Ñ‹Ð¹ Ñ‚ÐµÑÑ‚" << endl;
+		cout << endl << "0. - Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
 		cout << "-> ";
 		cin >> i;
 
@@ -99,12 +99,12 @@ void main(){
 		case 1:{
 				   string name, author;
 				   int year;
-				   cout << endl << "Ââåäèòå àâòîðà" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð°" << endl << "-> ";
 				   cin.get(); //fix
 				   getline(cin, author);
-				   cout << endl << "Ââåäèòå íàçâàíèå" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "-> ";
 				   getline(cin, name);
-				   cout << endl << "Ââåäèòå ãîä" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´" << endl << "-> ";
 				   cin >> year;
 
 				   addBook(author, name, year);
@@ -113,55 +113,55 @@ void main(){
 			break;
 		case 2:{
 				   string name = NULL;
-				   cout << endl << "Ââåäèòå íàçâàíèå" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "-> ";
 				   cin.get(); //fix
 				   getline(cin, name);
 				   Book* book = lib.search(name);
 				   if (book != NULL){
 					   removeBook(book);
-					   cout << "Êíèãà óäàëåíà èç áèáëèîòåêè. " << endl;
+					   cout << "ÐšÐ½Ð¸Ð³Ð° ÑƒÐ´Ð°Ð»ÐµÐ½Ð° Ð¸Ð· Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐ¸. " << endl;
 				   }
 				   else{
-					   cout << "Òàêîé êíèãè íå ñóùåñòâóåò." << endl;
+					   cout << "Ð¢Ð°ÐºÐ¾Ð¹ ÐºÐ½Ð¸Ð³Ð¸ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚." << endl;
 				   }
 				   cout << endl;
 		}
 			break;
 		case 3:{
 				   string name = NULL;
-				   cout << endl << "Ââåäèòå íàçâàíèå" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "-> ";
 				   cin.get(); //fix
 				   getline(cin, name);
 
 				   Book* book = lib.search(name);
 
 				   if (book != NULL){
-					   cout << "<!--- Èíôîðìàöèÿ ---!>" << endl;
-					   cout << "Íàçâàíèå: " << book->name << endl;
-					   cout << "Àâòîð: " << book->author << endl;
-					   cout << "Ãîä: " << book->year << endl;
+					   cout << "<!--- Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ ---!>" << endl;
+					   cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << book->name << endl;
+					   cout << "ÐÐ²Ñ‚Ð¾Ñ€: " << book->author << endl;
+					   cout << "Ð“Ð¾Ð´: " << book->year << endl;
 				   }
 				   else{
-					   cout << "Òàêîé êíèãè íå ñóùåñòâóåò.";
+					   cout << "Ð¢Ð°ÐºÐ¾Ð¹ ÐºÐ½Ð¸Ð³Ð¸ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚.";
 				   }
 				   cout << endl;
 		}
 			break;
 		case 4:{
 				   int year = 0;
-				   cout << endl << "Ââåäèòå ãîä" << endl << "-> ";
+				   cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´" << endl << "-> ";
 				   cin >> year;
 
 				   Book* book = lib.search(year);
 
 				   if (book != NULL){
-					   cout << "<!--- Èíôîðìàöèÿ ---!>" << endl;
-					   cout << "Íàçâàíèå: " << book->name << endl;
-					   cout << "Àâòîð: " << book->author << endl;
-					   cout << "Ãîä: " << book->year << endl;
+					   cout << "<!--- Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ ---!>" << endl;
+					   cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << book->name << endl;
+					   cout << "ÐÐ²Ñ‚Ð¾Ñ€: " << book->author << endl;
+					   cout << "Ð“Ð¾Ð´: " << book->year << endl;
 				   }
 				   else{
-					   cout << "Òàêîé êíèãè íå ñóùåñòâóåò.";
+					   cout << "Ð¢Ð°ÐºÐ¾Ð¹ ÐºÐ½Ð¸Ð³Ð¸ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚.";
 				   }
 				   cout << endl;
 		}
@@ -174,7 +174,7 @@ void main(){
 			testing();
 			break;
 		default:
-			cout << "Íåèçâåñòíûé íîìåð.";
+			cout << "ÐÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€.";
 			break;
 		}
 	}
