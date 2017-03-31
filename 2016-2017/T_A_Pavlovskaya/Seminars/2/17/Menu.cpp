@@ -36,8 +36,20 @@ BaseFigure* Menu::SelectObject(const Factory& fctry) const{
 	return fctry.pObj[item - 1];
 }
 
- int Menu::SelectItem(int nItem) {
-	// Возьмите код аналогичной функции из проекта Task2_l
+Action* Menu::SelectAction(const BaseFigure* pObj) const{
+	if (!pObj) return 0;
+	int nItem = pAct.size();
+	cout << " \n";
+	cout << "Select one of the following Actions:\n";
+	for (int i = 0; i < nItem; ++i) {
+		cout << i + 1 << ". ";
+		cout << pAct[i]->getName() << endl;
+	}
+	int item = SelectItem(nItem);
+	return pAct[item - 1];
+}
+
+int Menu::SelectItem(int nItem) {
 	cout << " \n";
 	int item;
 	while (true) {
@@ -53,17 +65,4 @@ BaseFigure* Menu::SelectObject(const Factory& fctry) const{
 		}
 	}
 	return item;
-}
-
-Action* Menu::SelectAction(const BaseFigure* pObj) const{
-	if (!pObj) return 0;
-	int nItem = pAct.size();
-	cout << " \n";
-	cout << "Select one of the following Actions:\n";
-	for (int i = 0; i < nItem; ++i) {
-		cout << i + 1 << ". ";
-		cout << pAct[i]->getName() << endl;
-	}
-	int item = SelectItem(nItem);
-	return pAct[item - 1];
 }

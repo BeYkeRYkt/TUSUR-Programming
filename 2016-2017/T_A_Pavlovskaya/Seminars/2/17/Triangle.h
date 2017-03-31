@@ -3,31 +3,52 @@
 
 #include "BaseFigure.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-//ќчень сложный класс дл¤ треугольника
+//Очень сложный класс треугольника
 class Triangle : public BaseFigure {
-protected:
-	int A;
-	int H;
 public:
-	Triangle(int a, int b) : BaseFigure("Triangle") {
+	Triangle(string _name, int a, int h, int x, int y) : name(_name) {
 		A = a;
-		H = b;
+		H = h;
+		X = x;
+		Y = y;
 	}
 
-	const double Triangle::getSquare() const{
+	const string& Triangle::getName() const{
+		return name;
+	}
+
+	int Triangle::getSquare() const{
 		return 1.0 / 2.0 * (A * H);
 	}
 
-	void Triangle::move(){
-		cout << "I'm Triangle" << endl;
-		BaseFigure::move();
-	}
-
 	const bool Triangle::isIntersect(BaseFigure* bf) const{
+		if (bf->getX() == getX() || bf->getY() == getY()){
+			return true;
+		}
 		return false;
 	}
+
+	int Triangle::getX() const {
+		return X;
+	}
+
+	int Triangle::getY() const {
+		return Y;
+	}
+
+	void Triangle::move(int x, int y){
+		X += x;
+		Y += y;
+		cout << getName() << " moved!";
+	}
+private:
+	string name;
+	string val;
+	int A, H;
+	int X, Y;
 };
 #endif

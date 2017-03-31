@@ -1,6 +1,7 @@
+#ifndef SHOWS_H
+#define SHOWS_H
 #include "Action.h"
 #include "BaseFigure.h"
-#include "Menu.h"
 #include "Factory.h"
 
 using namespace std;
@@ -18,3 +19,4 @@ private:
 	string name;
 };
 extern ShowS show_s;
+#endif

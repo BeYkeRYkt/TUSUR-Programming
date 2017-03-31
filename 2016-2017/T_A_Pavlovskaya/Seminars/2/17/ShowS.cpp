@@ -10,5 +10,4 @@ void ShowS::operate(BaseFigure* pObj) {
 	cin.get();
 }
 
-// ֳכמבאכםי מבתוךע
 ShowS show_s;

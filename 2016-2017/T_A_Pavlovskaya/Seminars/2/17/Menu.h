@@ -1,9 +1,9 @@
-/////////////////////////////////////////////////////
-// Menu.h
+#ifndef MENU_H
+#define MENU_H
+#include <vector>
 #include "BaseFigure.h"
 #include "Action.h"
 #include "Factory.h"
-#include <vector>
 
 using namespace std;
 
@@ -19,3 +19,4 @@ public:
 private:
 	vector<Action*> pAct;
 };
+#endif

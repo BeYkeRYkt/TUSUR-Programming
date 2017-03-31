@@ -5,13 +5,14 @@
 using namespace std;
 
 void MoveFigure::operate(BaseFigure* pObj) {
+	cout << "";
 	move(pObj);
 	cin.get();
 }
 
 void MoveFigure::move(BaseFigure* pObj){
-	pObj->move();
+	//TODO: Implement moving with x and y coordinates
+	pObj->move(0, 0);
 }
 
-// ֳכמבאכםי מבתוךע
 MoveFigure move_fig;

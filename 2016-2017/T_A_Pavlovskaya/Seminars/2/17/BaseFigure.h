@@ -9,21 +9,12 @@ using namespace std;
 // Базовый класс для каких-то очень сложных фигур
 class BaseFigure {
 public:
-	BaseFigure(string s = "") : name(s) {}
-
-	virtual const double getSquare() const = 0;
-
-	void move(){
-		cout << name << ": YA SHEVELNULSYA!" << endl;
-	}
-
-	string getName(){
-		return name;
-	}
-
+	virtual ~BaseFigure(){};
+	virtual const string& getName() const = 0;
+	virtual int getSquare() const = 0;
 	virtual const bool isIntersect(BaseFigure* bf) const = 0;
-protected:
-	// Название фигуры
-	string name;
+	virtual int getX() const = 0;
+	virtual int getY() const = 0;
+	virtual void move(int x, int y){} //hotfix
 };
 #endif

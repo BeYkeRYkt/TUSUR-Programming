@@ -8,26 +8,46 @@ using namespace std;
 
 //Какой-то очень сложный тетрагон
 class Tetragon : public BaseFigure {
-protected:
-	int A;
-	int H;
 public:
-	Tetragon(int a, int b) : BaseFigure("Tetragon") {
+	Tetragon(string _name, int a, int h, int x, int y) : name(_name) {
 		A = a;
-		H = b;
+		H = h;
+		X = x;
+		Y = y;
 	}
 
-	const double Tetragon::getSquare() const{
+	const string& Tetragon::getName() const{
+		return name; 
+	}
+
+	int Tetragon::getSquare() const{
 		return A*H;
 	}
 
-	void Tetragon::move(){
-		cout << "I'm Tetragon" << endl;
-		BaseFigure::move();
+	const bool Tetragon::isIntersect(BaseFigure* bf) const{
+		if (bf->getX() == getX() || bf->getY() == getY()){
+			return true;
+		}
+		return false;
 	}
 
-	const bool Tetragon::isIntersect(BaseFigure* bf) const{
-		return true;
+	int Tetragon::getX() const {
+		return X;
 	}
+
+	int Tetragon::getY() const {
+		return Y;
+	}
+
+	void Tetragon::move(int x, int y){
+		X += x;
+		Y += y;
+		cout << getName() << " moved!";
+	}
+private:
+	string name;
+	string val;
+	int A, H;
+	int X, Y;
 };
 #endif

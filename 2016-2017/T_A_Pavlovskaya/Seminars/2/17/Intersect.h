@@ -1,6 +1,7 @@
+#ifndef INTERSECT_H
+#define INTERSECT_H
 #include "Action.h"
 #include "BaseFigure.h"
-#include "Menu.h"
 #include "Factory.h"
 
 using namespace std;
@@ -20,3 +21,4 @@ private:
 	string name;
 };
 extern Intersect intersect;
+#endif

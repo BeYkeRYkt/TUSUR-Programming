@@ -12,8 +12,7 @@ public:
 	Factory(){}
 	void AddObject();
 	void DeleteObject();
-	vector<BaseFigure*> pObj;
 private:
-	//vector<BaseFigure*> pObj;
+	vector<BaseFigure*> pObj;
 };
 #endif

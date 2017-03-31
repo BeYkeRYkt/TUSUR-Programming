@@ -16,7 +16,8 @@
 using namespace std;
 
 Action* pActs[] = { &show_s, &move_fig, &intersect};
-vector<Action*> actionList(pActs, pActs + sizeof(pActs) / sizeof(Action*));
+vector<Action*> actionList(pActs,
+	pActs + sizeof(pActs)/sizeof(Action*));
 
 int main(){
 	SetConsoleCP(1251);

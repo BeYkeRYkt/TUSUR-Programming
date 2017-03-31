@@ -3,7 +3,6 @@
 #include "Triangle.h"
 #include "Tetragon.h"
 #include <iostream>
-//#include <string>
 
 using namespace std;
 
@@ -16,19 +15,23 @@ void Factory::AddObject(){
 	int type = Menu::SelectItem(2);
 
 	int a, b;
-	cout << "¬ведите A" << endl << "-> ";
+	cout << "Введите A" << endl << "-> ";
 	cin >> a;
-	cout << "¬ведите B" << endl << "-> ";
+	cout << "Введите B" << endl << "-> ";
 	cin >> b;
 
 	BaseFigure* bf;
 
+	//TODO: Implement X,Y position input
+	int x = 0;
+	int y = 0;
+
 	switch (type){
 	case 1:
-		bf = new Triangle(a, b);
+		bf = new Triangle("Triagnle", a, b, x, y);
 		break;
 	case 2:
-		bf = new Tetragon(a, b);
+		bf = new Tetragon("Tetragon", a, b, x, y);
 		break;
 	}
 	pObj.push_back(bf);

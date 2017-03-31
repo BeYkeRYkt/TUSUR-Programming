@@ -1,6 +1,7 @@
+#ifndef MoveFigure_h
+#define MoveFigure_h
 #include "Action.h"
 #include "BaseFigure.h"
-#include "Menu.h"
 #include "Factory.h"
 
 using namespace std;
@@ -17,3 +18,4 @@ private:
 	string name;
 };
 extern MoveFigure move_fig;
+#endif

@@ -6,18 +6,13 @@
 
 using namespace std;
 
-//Action* pActs[] = { &show_s, &move_fig, &intersect };
-//vector<Action*> actionList(pActs, pActs + sizeof(pActs) / sizeof(Action*));
-
 void Intersect::operate(BaseFigure* pObj) {
-	//cout << pObj->getName() << ": ";
-	//cout << pObj->getSquare() << endl;
-	//Menu menu(actionList);
-	//Factory factory;
-	//BaseFigure* figure = menu.SelectObject(factory);
+	cout << pObj->getName() << ": ";
+	cout << pObj->getSquare() << endl;
+	//TODO: Need more testing, huh ?
+	//BaseFigure* figure = menu.SelectObject(fctry);
 	//pObj->isIntersect(figure);
-	//cin.get();
+	cin.get();
 }
 
-// ֳכמבאכםי מבתוךע
 Intersect intersect;
