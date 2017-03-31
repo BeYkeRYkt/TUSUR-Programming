@@ -9,4 +9,4 @@ Maintainer: Vladimir Mikhaylov "BeYkeRYkt, group: 546
 
 # Contributors
 
-![BeYkeRYkt_Avatar](https://avatars1.githubusercontent.com/u/2690323?s=100)  ![DevelopedInside](https://avatars3.githubusercontent.com/u/20620741?s=100)
+![BeYkeRYkt_Avatar](https://avatars1.githubusercontent.com/u/2690323?s=100)
