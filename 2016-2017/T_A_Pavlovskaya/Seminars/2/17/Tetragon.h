@@ -42,7 +42,10 @@ public:
 	void Tetragon::move(int x, int y){
 		X += x;
 		Y += y;
-		cout << getName() << " moved!";
+		cout << getName() << " moved!" << endl;
+		cout << "My new coordinates! " << endl;
+		cout << "X:= " << X << endl;
+		cout << "Y:= " << Y << endl;
 	}
 private:
 	string name;

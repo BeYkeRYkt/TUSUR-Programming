@@ -2,7 +2,6 @@
 #define MoveFigure_h
 #include "Action.h"
 #include "BaseFigure.h"
-#include "Factory.h"
 
 using namespace std;
 
@@ -12,8 +11,8 @@ public:
 	const std::string& getName() const{
 		return name;
 	}
-	void operate(BaseFigure* fig);
-	void move(BaseFigure* fig);
+	void operate(BaseFigure*, Factory, Menu);
+	void move(BaseFigure*);
 private:
 	string name;
 };

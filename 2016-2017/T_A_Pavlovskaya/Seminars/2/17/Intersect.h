@@ -2,7 +2,6 @@
 #define INTERSECT_H
 #include "Action.h"
 #include "BaseFigure.h"
-#include "Factory.h"
 
 using namespace std;
 
@@ -14,7 +13,7 @@ public:
 		return name; 
 	}
 
-	void operate(BaseFigure*);
+	void operate(BaseFigure*, Factory, Menu);
 
 	bool isIntersect(BaseFigure*, BaseFigure*);
 private:

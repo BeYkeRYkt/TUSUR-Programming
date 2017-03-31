@@ -14,7 +14,7 @@ public:
 		return name;
 	}
 
-	void operate(BaseFigure* fig);
+	void operate(BaseFigure* fig, Factory, Menu);
 private:
 	string name;
 };

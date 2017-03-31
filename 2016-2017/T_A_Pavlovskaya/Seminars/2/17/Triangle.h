@@ -44,6 +44,9 @@ public:
 		X += x;
 		Y += y;
 		cout << getName() << " moved!";
+		cout << "My new coordinates! " << endl;
+		cout << "X:= " << X << endl;
+		cout << "Y:= " << Y << endl;
 	}
 private:
 	string name;

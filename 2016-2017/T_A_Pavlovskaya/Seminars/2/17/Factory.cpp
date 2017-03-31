@@ -22,9 +22,13 @@ void Factory::AddObject(){
 
 	BaseFigure* bf;
 
-	//TODO: Implement X,Y position input
 	int x = 0;
+	cout << "Введите позицию X" << endl << "-> ";
+	cin >> x;
+
 	int y = 0;
+	cout << "Введите позицию Y" << endl << "-> ";
+	cin >> y;
 
 	switch (type){
 	case 1:

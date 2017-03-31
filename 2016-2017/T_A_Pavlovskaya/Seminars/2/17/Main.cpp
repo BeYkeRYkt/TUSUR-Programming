@@ -4,6 +4,7 @@
 
 #include "Action.h"
 #include "ShowS.h"
+#include "FigureInformation.h"
 #include "MoveFigure.h"
 #include "Intersect.h"
 
@@ -15,9 +16,8 @@
 
 using namespace std;
 
-Action* pActs[] = { &show_s, &move_fig, &intersect};
-vector<Action*> actionList(pActs,
-	pActs + sizeof(pActs)/sizeof(Action*));
+Action* pActs[] = { &show_s, &fI, &move_fig, &intersect};
+vector<Action*> actionList(pActs, pActs + sizeof(pActs)/sizeof(Action*));
 
 int main(){
 	SetConsoleCP(1251);
@@ -25,6 +25,7 @@ int main(){
 
 	Factory factory;
 	Menu menu(actionList);
+
 	JobMode jobMode;
 
 	while ((jobMode = menu.SelectJob()) != Exit) {
@@ -37,7 +38,7 @@ int main(){
 			BaseFigure* pObj = menu.SelectObject(factory);
 			Action* pAct = menu.SelectAction(pObj);
 			if (pAct){
-				pAct->operate(pObj);
+				pAct->operate(pObj, factory, menu);
 			}
 			break;
 		}
