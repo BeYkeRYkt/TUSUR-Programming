@@ -5,6 +5,8 @@ A repository for storing of my source code while studying at a university TUSUR.
 
 Possible Training Period: 2016 - 2020
 
+Maintainer: Vladimir Mikhaylov "BeYkeRYkt, group: 546
+
 # Contributors
 
 ![BeYkeRYkt_Avatar](https://avatars1.githubusercontent.com/u/2690323?s=100)  ![DevelopedInside](https://avatars3.githubusercontent.com/u/20620741?s=100)
