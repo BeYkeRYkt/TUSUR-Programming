@@ -1,4 +1,4 @@
-#ifndef FigureInformation_h
+﻿#ifndef FigureInformation_h
 #define FigureInformation_h
 #include "Action.h"
 #include "BaseFigure.h"

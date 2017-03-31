@@ -1,4 +1,4 @@
-#include "BaseFigure.h"
+﻿#include "BaseFigure.h"
 #include "ShowS.h"
 #include <iostream>
 #include "Menu.h"

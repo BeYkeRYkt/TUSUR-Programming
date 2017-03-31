@@ -1,4 +1,4 @@
-#ifndef MoveFigure_h
+﻿#ifndef MoveFigure_h
 #define MoveFigure_h
 #include "Action.h"
 #include "BaseFigure.h"

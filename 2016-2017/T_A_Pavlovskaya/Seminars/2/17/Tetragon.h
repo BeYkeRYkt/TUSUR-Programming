@@ -1,4 +1,4 @@
-#ifndef Tetragon_h
+﻿#ifndef Tetragon_h
 #define Tetragon_h
 
 #include <iostream>

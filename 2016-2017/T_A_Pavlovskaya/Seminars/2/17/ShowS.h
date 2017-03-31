@@ -1,4 +1,4 @@
-#ifndef SHOWS_H
+﻿#ifndef SHOWS_H
 #define SHOWS_H
 #include "Action.h"
 #include "BaseFigure.h"

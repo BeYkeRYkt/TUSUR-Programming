@@ -1,4 +1,4 @@
-#ifndef Triangle_h
+﻿#ifndef Triangle_h
 #define Triangle_h
 
 #include "BaseFigure.h"

@@ -1,4 +1,4 @@
-#include "BaseFigure.h"
+﻿#include "BaseFigure.h"
 #include "Tetragon.h"
 #include "Triangle.h"
 
@@ -29,6 +29,7 @@ int main(){
 	JobMode jobMode;
 
 	while ((jobMode = menu.SelectJob()) != Exit) {
+		//system("cls");
 		switch (jobMode) {
 		case AddObj: factory.AddObject();
 			break;

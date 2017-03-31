@@ -1,4 +1,4 @@
-#include "BaseFigure.h"
+﻿#include "BaseFigure.h"
 #include "FigureInformation.h"
 #include "ShowS.h"
 #include "MoveFigure.h"

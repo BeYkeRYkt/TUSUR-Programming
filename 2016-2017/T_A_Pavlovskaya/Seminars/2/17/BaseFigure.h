@@ -1,4 +1,4 @@
-#ifndef BaseFigure_h
+﻿#ifndef BaseFigure_h
 #define BaseFigure_h
 
 #include <iostream>

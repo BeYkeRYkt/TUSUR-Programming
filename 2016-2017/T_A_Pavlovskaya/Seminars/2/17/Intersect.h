@@ -1,4 +1,4 @@
-#ifndef INTERSECT_H
+﻿#ifndef INTERSECT_H
 #define INTERSECT_H
 #include "Action.h"
 #include "BaseFigure.h"

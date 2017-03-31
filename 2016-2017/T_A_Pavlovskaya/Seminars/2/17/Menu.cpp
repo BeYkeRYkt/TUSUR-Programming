@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "BaseFigure.h"
 #include "Triangle.h"
 #include "Tetragon.h"
