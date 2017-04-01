@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// You popalsya, fgt!
+// You popalsya!
 //
 //░░▓▓▓▓▓░░░░░░▓▓▓▓▓░░░░░░░░░░░░░░
 //░░░▓▓▓▓▓▓░░░░░▓▓▓▓▓░░░░░░░░░░░░░

@@ -16,37 +16,17 @@ public:
 		Y = y;
 	}
 
-	const string& Tetragon::getName() const{
-		return name; 
-	}
+	const string& getName() const;
 
-	int Tetragon::getSquare() const{
-		return A*H;
-	}
+	int getSquare() const;
 
-	const bool Tetragon::isIntersect(BaseFigure* bf) const{
-		if (bf->getX() == getX() || bf->getY() == getY()){
-			return true;
-		}
-		return false;
-	}
+	const bool isIntersect(BaseFigure* bf) const;
 
-	int Tetragon::getX() const {
-		return X;
-	}
+	int getX() const;
 
-	int Tetragon::getY() const {
-		return Y;
-	}
+	int getY() const;
 
-	void Tetragon::move(int x, int y){
-		X += x;
-		Y += y;
-		cout << getName() << " moved!" << endl;
-		cout << "My new coordinates! " << endl;
-		cout << "X:= " << X << endl;
-		cout << "Y:= " << Y << endl;
-	}
+	void move(int x, int y);
 private:
 	string name;
 	string val;

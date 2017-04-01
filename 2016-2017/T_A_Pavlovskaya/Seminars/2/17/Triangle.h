@@ -10,44 +10,24 @@ using namespace std;
 //Очень сложный класс треугольника
 class Triangle : public BaseFigure {
 public:
-	Triangle(string _name, int a, int h, int x, int y) : name(_name) {
+	Triangle::Triangle(string _name, int a, int h, int x, int y) : name(_name) {
 		A = a;
 		H = h;
 		X = x;
 		Y = y;
 	}
 
-	const string& Triangle::getName() const{
-		return name;
-	}
+	const string& getName() const;
 
-	int Triangle::getSquare() const{
-		return 1.0 / 2.0 * (A * H);
-	}
+	int getSquare() const;
 
-	const bool Triangle::isIntersect(BaseFigure* bf) const{
-		if (bf->getX() == getX() || bf->getY() == getY()){
-			return true;
-		}
-		return false;
-	}
+	const bool isIntersect(BaseFigure* bf) const;
 
-	int Triangle::getX() const {
-		return X;
-	}
+	int getX() const;
 
-	int Triangle::getY() const {
-		return Y;
-	}
+	int getY() const;
 
-	void Triangle::move(int x, int y){
-		X += x;
-		Y += y;
-		cout << getName() << " moved!";
-		cout << "My new coordinates! " << endl;
-		cout << "X:= " << X << endl;
-		cout << "Y:= " << Y << endl;
-	}
+	void move(int x, int y);
 private:
 	string name;
 	string val;
