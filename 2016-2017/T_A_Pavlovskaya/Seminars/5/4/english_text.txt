@@ -1,0 +1,17 @@
+#random generate words
+Apple
+Bacon
+CyanogenMod
+DevelopedOne
+OnePlus
+OEM
+English
+OmniROM
+YOLO
+avatar
+A-GPS
+yes
+no
+iPhone
+oREO
+android
