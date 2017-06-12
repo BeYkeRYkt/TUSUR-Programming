@@ -1,0 +1,6 @@
+Apple=яблоко,Яблоко
+Button=Кнопка
+Chair=Стул
+
+Desk=Стол
+Table=Стол
