@@ -7,6 +7,12 @@ Possible Training Period: 2016 - 2020
 
 Maintainer: Vladimir Mikhailov, group: 546 (FoCS)
 
+Used software:
+
+- Microsoft Visual Studio Ultimate 2013 (12.0.21005.1 REL)
+
+- Microsoft .NET Framework (4.7.03056)
+
 # Contributors
 
 ![BeYkeRYkt_Avatar](https://avatars1.githubusercontent.com/u/2690323?s=100)
