@@ -128,16 +128,16 @@ int getRECTSide(int size_x, int size_y, POINT mouse_p){
 
 	int p = 0;
 
-	if (mouse_x <= half_x_l && mouse_y <= half_y_t) { // Левый вверхний угол
+	if (mouse_x <= half_x_l && mouse_y <= half_y_t) { // Р›РµРІС‹Р№ РІРІРµСЂС…РЅРёР№ СѓРіРѕР»
 		p = 1;
 	}
-	else if (mouse_x >= half_x_r && mouse_y <= half_y_t) { // Правый вверхний угол
+	else if (mouse_x >= half_x_r && mouse_y <= half_y_t) { // РџСЂР°РІС‹Р№ РІРІРµСЂС…РЅРёР№ СѓРіРѕР»
 		p = 2;
 	}
-	else if (mouse_x <= half_x_l && mouse_y >= half_y_b) { // Нижний левый угол
+	else if (mouse_x <= half_x_l && mouse_y >= half_y_b) { // РќРёР¶РЅРёР№ Р»РµРІС‹Р№ СѓРіРѕР»
 		p = 3;
 	}
-	else if (mouse_x >= half_x_r && mouse_y >= half_y_b) { // Нижний правый угол
+	else if (mouse_x >= half_x_r && mouse_y >= half_y_b) { // РќРёР¶РЅРёР№ РїСЂР°РІС‹Р№ СѓРіРѕР»
 		p = 4;
 	}
 	return p;
