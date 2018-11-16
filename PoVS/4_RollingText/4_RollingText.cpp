@@ -83,9 +83,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_TIMER: {
 					   LPARAM lparam = (LPARAM) GetWindowLong(hWnd, GWL_USERDATA);
-					   double old_angle = (double) LOWORD(lparam);
-					   double next_angle = 10;
-					   double new_angle = old_angle + next_angle;
+					   int old_angle = (int) LOWORD(lparam);
+					   int next_angle = 10;
+					   int new_angle = old_angle + next_angle;
 					   if (new_angle >= 360){
 						   new_angle -= 360;
 					   }
@@ -110,9 +110,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 							 LPARAM lparam = (LPARAM) GetWindowLong(hWnd, GWL_USERDATA);
 							 int font_size = (int) HIWORD(lparam);
 							 font_size -= 10;
-							 if (font_size <= 0){
-								 font_size = 1;
-							 }
 							 lparam = MAKELPARAM(LOWORD(lparam), font_size);
 							 SetWindowLong(hWnd, GWL_USERDATA, (LONG) lparam);
 							 InvalidateRect(hWnd, NULL, true);
@@ -127,8 +124,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 					   // create font
 					   HANDLE hfnt, hfntPrev;
-					   LOGFONT lf;
-					   ZeroMemory(&lf, sizeof(LOGFONT)); //clean memory for logicfont
+					   LOGFONT lf = {0};
 					   LPARAM lparam = (LPARAM) GetWindowLong(hWnd, GWL_USERDATA);
 					   double angle = (double) LOWORD(lparam);
 					   int font_size = (int) HIWORD(lparam);
@@ -142,14 +138,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 					   // start drawning
 					   TCHAR* str = TEXT("[SAMPLE TEXT]");
-					   SetBkMode(hdc, TRANSPARENT);
 					   SetTextAlign(hdc, TA_CENTER | TA_BASELINE);
-					   int x = (rc.right - rc.left) / 2;
-					   int y = (rc.bottom - rc.top) / 2;
+					   int x = rc.right/ 2;
+					   int y = rc.bottom / 2;
 					   TextOut(hdc, x, y, str, strlen(str));
 
 					   // Drop all
-					   SetBkMode(hdc, OPAQUE);
 					   SelectObject(hdc, hfntPrev);
 					   DeleteObject(hfnt);
 					   ::EndPaint(hWnd, &ps);
